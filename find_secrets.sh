@@ -1,3 +1,2 @@
 #!/bin/bash
-# Searches for base64 looking string in a git repository
-grep -re "[0-9a-f]\{32\}" --exclude-dir={.git,vendor}
+grep -re "[0-9a-f]\{6\}" --exclude-dir={.git,vendor} --exclude={*.log,*.log.?} --color=always --line-number $1
