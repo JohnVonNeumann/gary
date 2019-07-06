@@ -1,0 +1,6 @@
+language: bash
+
+script:
+  # We have to run with shopt globstar here to enable globbing that shellcheck
+  # doesn't support out of the box
+  - bash -c 'shopt -s globstar; shellcheck **/*.sh'
