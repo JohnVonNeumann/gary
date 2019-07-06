@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker run --rm -v ${PWD}:/yaml sdesbure/yamllint yamllint /yaml
+docker run --rm --volume "$(pwd)":/mnt --entrypoint sh koalaman/shellcheck-alpine:latest -c "shellcheck **/*.sh"
